@@ -1,4 +1,6 @@
 
+using GameZone.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -12,6 +14,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
+builder.Services.AddScoped<IDevicesServices, DevicesServices>();
 
 var app = builder.Build();
 
