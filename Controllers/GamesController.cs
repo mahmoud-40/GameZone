@@ -14,7 +14,7 @@ namespace GameZone.Controllers
             _categoriesServices = categoriesServices;
             _devicesServices = devicesServices;
         }
-        
+
         public IActionResult Index()
         {
             return View();
