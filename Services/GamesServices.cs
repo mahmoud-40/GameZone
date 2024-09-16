@@ -15,7 +15,7 @@
 
         public async Task Create(CreateGameFormViewModel game)
         {
-            // to store cover in db..
+            // to store cover in db.
             var coverName = $"{Guid.NewGuid()}{Path.GetExtension(game.Cover.FileName)}";
             var path = Path.Combine(_imagesPath, coverName);
             using var stream = File.Create(path);
